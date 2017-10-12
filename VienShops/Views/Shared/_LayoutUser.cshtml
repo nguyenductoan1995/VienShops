@@ -15,7 +15,6 @@
 	<!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body id="home">
 	<div class="wrapper">
@@ -55,8 +54,8 @@
 								</div>
 								<div class="col-md-3">
 									<ul class="usermenu">
-										<li><a href="@Url.Action("Login","Account")" class="log">Đăng nhập</a></li>
-										<li><a href="@Url.Action("Register","Account")" class="reg">Đăng ký</a></li>
+										<li><a href="checkout.html" class="log">Đăng nhập</a></li>
+										<li><a href="checkout2.html" class="reg">Đăng ký</a></li>
 									</ul>
 								</div>
 							</div>
@@ -143,7 +142,68 @@
 				</div>
 			</div>
 		</div>
-
+		<div class="clearfix"></div>
+		<div class="hom-slider">
+			<div class="container">
+				<div id="sequence">
+					<div class="sequence-prev"><i class="fa fa-angle-left"></i></div>
+					<div class="sequence-next"><i class="fa fa-angle-right"></i></div>
+					<ul class="sequence-canvas">
+						<li class="animate-in">
+							<div class="flat-caption caption1 formLeft delay300 text-center"><span class="suphead">Paris show 2017</span></div>
+							<div class="flat-caption caption2 formLeft delay400 text-center">
+								<h1>Mùa hè nóng bỏng</h1>
+							</div>
+							<div class="flat-caption caption3 formLeft delay500 text-center">
+								<p>Với thiết kế đầu nữ tính mang đậm chất mùa hè<br>Sẽ là lựa chọn rất thú vị cho phái đẹp.</p>
+							</div>
+							<div class="flat-button caption4 formLeft delay600 text-center">
+								<a class="more" href="#">
+									Xem Chi Tiết
+								</a>
+							</div>
+							<div class="flat-image formBottom delay200" data-duration="5" data-bottom="true"><img src="~/images/slider-image-01.png" alt=""></div>
+						</li>
+						<li>
+							<div class="flat-caption caption2 formLeft delay400">
+								<h1>Nét đẹp hiện đại</h1>
+							</div>
+							<div class="flat-caption caption3 formLeft delay500">
+								<h2>Mang phong cách dễ thương và trần ngập sức sống<br> </h2>
+							</div>
+							<div class="flat-button caption5 formLeft delay600"><a class="more" href="#">Xem Chi Tiết</a></div>
+							<div class="flat-image formBottom delay200" data-bottom="true"><img src="~/images/slider-image-02.png" alt=""></div>
+						</li>
+						<li>
+							<div class="flat-caption caption2 formLeft delay400 text-center">
+								<h1>Thời trang mới 2017</h1>
+							</div>
+							<div class="flat-caption caption3 formLeft delay500 text-center">
+								<p>Thiết kế mới đầy ứng tượng. <br>Là con gái thật tuyệt</p>
+							</div>
+							<div class="flat-button caption4 formLeft delay600 text-center"><a class="more" href="#">Xem Chi Tiết</a></div>
+							<div class="flat-image formBottom delay200" data-bottom="true"><img src="~/images/slider-image-03.png" alt=""></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="promotion-banner">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<div class="promo-box"><img src="~/images/promotion-01.png" alt=""></div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<div class="promo-box"><img src="~/images/promotion-02.png" alt=""></div>
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+							<div class="promo-box"><img src="~/images/promotion-03.png" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
 		@RenderBody()
 		<div class="clearfix"></div>
 		<div class="footer">
@@ -206,8 +266,5 @@
 	<script type="text/javascript" src="~/Scripts/jquery.carouFredSel-6.2.1-packed.js"></script>
 	<script defer src="~/Scripts/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="~/Scripts/script.min.js"></script>
-	@Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/bundles/bootstrap")
-	@RenderSection("scripts", required: false)
 </body>
 </html>

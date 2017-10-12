@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VienShops.Models;
 
 namespace VienShops.Controllers
 {
 	public class HomeController : Controller
 	{
+		DBVienShopsDataContext Db = new DBVienShopsDataContext();
+
 		public ActionResult Index()
 		{
 			return View();
@@ -26,5 +29,15 @@ namespace VienShops.Controllers
 
 			return View();
 		}
+		// sản phẩm mới 
+		public ActionResult NewProduct()
+		{
+			var newProduct = Db.SANPHAMs.OrderBy(n => n.MASP).Take(8).ToList();
+			return PartialView(newProduct);
+		}
+		public ActionResult FeaturedProduct() {
+			var featuredProduct = Db.SANPHAMs.OrderBy(n => n.GIA).Take(4).ToList();
+			return PartialView(featuredProduct);
+		} 
 	}
 }

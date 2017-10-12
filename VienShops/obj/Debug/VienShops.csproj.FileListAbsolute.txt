@@ -114,7 +114,6 @@ C:\Users\nguye\source\repos\VienShops\VienShops\bin\Microsoft.AI.ServerTelemetry
 C:\Users\nguye\source\repos\VienShops\VienShops\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\nguye\source\repos\VienShops\VienShops\bin\Microsoft.AI.Web.xml
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.csprojResolveAssemblyReference.cache
-C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.csproj.CoreCompileInputs.cache
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.dll
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.pdb
 C:\Users\nguye\source\repos\VienShops\VienShops\obj\Debug\VienShops.Migrations.migration_change.resources
