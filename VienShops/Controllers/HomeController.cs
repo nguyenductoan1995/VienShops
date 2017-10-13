@@ -28,29 +28,44 @@ namespace VienShops.Controllers
 			var newProduct = Db.SANPHAMs.OrderBy(n => n.MASP).Take(4).ToList();
 			return PartialView(newProduct);
 		}
-		public ActionResult FeaturedProduct() {
+		public ActionResult FeaturedProduct()
+		{
 			var featuredProduct = Db.SANPHAMs.OrderBy(n => n.GIA).Take(4).ToList();
 			return PartialView(featuredProduct);
-		} 
-        public ActionResult Products()
-        {
-            var products = Db.LOAISANPHAMs.ToList();
-            return PartialView(products);
-        }
-        // Show products list
-        public ActionResult ShowProductList(string id)
-        {
-            //var tenLoai = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == id);
-            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
-            return View(productList);
-        }
-
-        public PartialViewResult MenuLeft()
-        {
-            return PartialView();
-        }
-		public ActionResult Contact() {
+		}
+		public ActionResult Products()
+		{
+			var products = Db.LOAISANPHAMs.ToList();
+			return PartialView(products);
+		}
+		// Show products list
+		public ActionResult ShowProductList(string id)
+		{
+			//var tenLoai = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == id);
+			var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+			return View(productList);
+		}
+		// Menu Trái của Loại sản phẩm 
+		public PartialViewResult MenuLeft()
+		{
+			return PartialView();
+		}
+		// Liên hệ 
+		public ActionResult Contact()
+		{
 			return View();
 		}
+		// Giỏ hàng 
+		public ActionResult Cart()
+		{
+			return View();
+		}
+		// Chi tiết sản phẩm 
+		public ActionResult Detail(string id)
+		{
+			var detail = Db.SANPHAMs.Where(n => n.MASP == id).ToList();
+			return View(detail);
+		}
+
 	}
 }

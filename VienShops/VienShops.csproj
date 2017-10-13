@@ -355,6 +355,8 @@
     <Content Include="Views\Home\ShowProductList.cshtml" />
     <Content Include="Views\Home\MenuLeft.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
