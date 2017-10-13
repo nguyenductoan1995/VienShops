@@ -22,13 +22,6 @@ namespace VienShops.Controllers
 
 			return View();
 		}
-
-		public ActionResult Contact()
-		{
-			ViewBag.Message = "Your contact page.";
-
-			return View();
-		}
 		// sản phẩm mới 
 		public ActionResult NewProduct()
 		{
@@ -56,5 +49,8 @@ namespace VienShops.Controllers
         {
             return PartialView();
         }
+		public ActionResult Contact() {
+			return View();
+		}
 	}
 }
