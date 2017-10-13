@@ -39,5 +39,10 @@ namespace VienShops.Controllers
 			var featuredProduct = Db.SANPHAMs.OrderBy(n => n.GIA).Take(4).ToList();
 			return PartialView(featuredProduct);
 		} 
+        public ActionResult Products()
+        {
+            var products = Db.LOAISANPHAMs.ToList();
+            return PartialView(products);
+        }
 	}
 }
