@@ -44,5 +44,17 @@ namespace VienShops.Controllers
             var products = Db.LOAISANPHAMs.ToList();
             return PartialView(products);
         }
+        // Show products list
+        public ActionResult ShowProductList(string id)
+        {
+            //var tenLoai = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == id);
+            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            return View(productList);
+        }
+
+        public PartialViewResult MenuLeft()
+        {
+            return PartialView();
+        }
 	}
 }

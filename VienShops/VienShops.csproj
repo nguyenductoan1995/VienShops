@@ -354,6 +354,8 @@
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Home\ShowProductList.cshtml" />
+    <Content Include="Views\Home\MenuLeft.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
