@@ -32,7 +32,7 @@ namespace VienShops.Controllers
 		// sản phẩm mới 
 		public ActionResult NewProduct()
 		{
-			var newProduct = Db.SANPHAMs.OrderBy(n => n.MASP).Take(8).ToList();
+			var newProduct = Db.SANPHAMs.OrderBy(n => n.MASP).Take(4).ToList();
 			return PartialView(newProduct);
 		}
 		public ActionResult FeaturedProduct() {
