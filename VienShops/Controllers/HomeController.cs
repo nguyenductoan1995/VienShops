@@ -43,8 +43,16 @@ namespace VienShops.Controllers
 		{
 			//var tenLoai = Db.LOAISANPHAMs.SingleOrDefault(n => n.MALOAISP == id);
 			var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            // Gán mã, khi load form lưu id.
+            ViewBag.ID = id;
 			return View(productList);
 		}
+        // Show products list giao diện 2
+        public ActionResult ShowProductListTheme2(string id)
+        {
+            var productList = Db.SANPHAMs.Where(n => n.MALOAISP == id).ToList();
+            return View(productList);
+        }
 		// Menu Trái của Loại sản phẩm 
 		public PartialViewResult MenuLeft()
 		{
@@ -66,6 +74,5 @@ namespace VienShops.Controllers
 			var detail = Db.SANPHAMs.Where(n => n.MASP == id).ToList();
 			return View(detail);
 		}
-
 	}
 }
